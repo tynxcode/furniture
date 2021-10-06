@@ -1,0 +1,42 @@
+.notification {
+    padding: 15px 25px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        border-bottom: 1px solid #dcdcdc;
+        h5 {
+            margin: 0;
+        }
+        button {
+            border: none;
+            background: none;
+        }
+    }
+    .body {
+        padding: 10px 0;
+        border-bottom: 1px solid #dcdcdc;
+        .icon {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .text {
+            padding: 10px 0;
+            text-align: center;
+        }
+    }
+    .footer {
+        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        .ok_btn {
+            padding: 8px 20px;
+            background: #f93707;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+        }
+    }
+    
+}

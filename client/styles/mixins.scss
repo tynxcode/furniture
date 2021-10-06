@@ -1,0 +1,60 @@
+$xs: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin mobile-device {
+  @media (max-width: #{$xs - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-device {
+  @media (min-width: #{$xs}) and (max-width: #{$md - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-device {
+  @media (min-width: #{$md}) and (max-width: #{$lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin lage-device {
+  @media (min-width: #{$lg}) and (max-width: #{$xl - 1px}) {
+    @content;
+  }
+}
+
+@mixin huge-device {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == mobileDevice) {
+      @include mobile-device {
+        @content;
+      }
+    } @else if ($key == smallDevice) {
+      @include small-device {
+        @content;
+      }
+    } @else if ($key == mediumDevice) {
+      @include medium-device {
+        @content;
+      }
+    } @else if ($key == lageDevice) {
+      @include lage-device {
+        @content;
+      }
+    } @else if ($key == hugeDevice) {
+      @include huge-device {
+        @content;
+      }
+    }
+  }
+}

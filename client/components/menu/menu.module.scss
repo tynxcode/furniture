@@ -1,0 +1,59 @@
+@import "../../styles/mixins.scss";
+
+.menu {
+    padding: 50px 0;
+    h6 {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 16px;
+        color: #4d68fe;
+        margin: 0;
+        button {
+            display: none;
+            border: none;
+            background: #fff;
+            @include media(mobileDevice, smallDevice, mediumDevice) {
+                display: inline-block;
+            }
+        }
+    }
+    .menu_items {
+        padding: 10px 0;
+        transition: 0.2s;
+        .menu_item {
+            display: flex;
+            padding: 5px 0;
+            color: #8b8b8b;
+            cursor: pointer;
+            .menu_icon {
+                text-align: center;
+                width: 25px;
+                margin-right: 10px;
+                svg {
+                    font-size: 20px;
+                }
+            }
+            span {
+                font-size: 15px;
+            }
+        }
+        @include media(mobileDevice, smallDevice, mediumDevice) {
+            height: 160px;
+        }
+    }
+    .menu_items__close {
+        @extend .menu_items;
+        @include media(mobileDevice, smallDevice, mediumDevice) {
+            padding: 5px 0;
+            opacity: 0;
+            visibility: hidden;
+            height: 0px;
+        }
+    }
+    @include media(mobileDevice, smallDevice, mediumDevice) {
+        padding: 20px 0;
+    }
+}
+
+

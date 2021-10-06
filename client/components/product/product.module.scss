@@ -1,0 +1,113 @@
+.product {
+    padding: 30px 30px;
+    box-shadow: var(--sketch_box-shadow);
+    border-radius: 20px;
+    cursor: pointer;
+    .image {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        span {
+            cursor: pointer;
+            position: absolute;
+            right: -5px;
+            top: -5px;
+            background-color: #f30605;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            transition: 0.5s;
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .name {
+        padding: 5px 0px 5px 0px;
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    .review_rate {
+        display: flex;
+       
+    }
+
+    .sub_text {
+        font-size: 14px;
+        color: #6a8894;
+        text-transform: uppercase;
+        padding: 5px 0px;
+    }
+    
+    .price_and_buying {
+        display: flex;
+        padding: 5px 0px;
+        justify-content: space-between;
+        align-items: center;
+        .price {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .actions {
+            display: flex;
+            .add_to_cart_btn {
+                border: none;
+                border-radius: 100%;
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #14a7fa;
+                border: 2px solid #fff;
+                transition: 0.2s;
+                &:hover {
+                    background: #fff;
+                    border: 2px solid #14a7fa;
+                    svg {
+                        color: #14a7fa;
+                    }
+                }
+            }
+            .view_btn {
+                border: none;
+                border-radius: 100%;
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                margin-left: 5px;
+                justify-content: center;
+                align-items: center;
+                background: #f93707;
+                border: 2px solid #fff;
+                transition: 0.2s;
+                &:hover {
+                    background: #fff;
+                    border: 2px solid #f93707;
+                    svg {
+                        color: #f93707;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .product {
+        padding: 20px 15px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product {
+        margin-bottom: 30px;
+    }
+}

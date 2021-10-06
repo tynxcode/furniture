@@ -1,0 +1,101 @@
+.hot_product {
+    padding: 70px 0px;
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .detail {
+        padding: 0px 50px 0px 0px;
+        h5 {
+            display: flex;
+            align-items: center;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .brand {
+            padding: 0px 0px 5px 0px;
+            color: #e21873;
+            text-transform: uppercase;
+        }
+        .description {
+            padding: 10px 0px;
+        }
+        .price {
+            font-size: 24px;
+            padding: 5px 0px 5px 0px;
+            font-weight: bold;
+            span {
+                font-size: 18px;
+                color: #6a8894;
+                text-decoration: line-through;
+                font-weight: normal;
+            }
+        }
+        .actions {
+            padding: 5px 0px 5px 0px;
+            button {
+                padding: 10px 20px;
+                margin-right: 20px;
+                border-radius: 10px;
+                background-color: #fff;
+                transition: 0.2s;
+                &:hover {
+                    color: #fff;
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
+            .add_to_cart {
+                color: #14a7fa;
+                border: 2px solid #14a7fa;
+                &:hover {
+                    background-color: #14a7fa;
+                }
+            }
+            .view {
+                color: #f93707;
+                border: 2px solid #f93707;
+                &:hover {
+                    background-color: #f93707;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hot_product {
+        .detail {
+            padding: 0px 10px;
+            .actions {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 8px 10px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .hot_product {
+        padding: 30px 0px;
+        .detail {
+            padding: 0px 10px;
+            .actions {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 8px 15px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

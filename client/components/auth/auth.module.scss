@@ -1,0 +1,54 @@
+.auth {
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    form {
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: var(--sketch_box-shadow);
+        .error {
+            color: #f30606;
+            font-size: 14px;
+            text-align: center;
+        }
+        h4 {
+            font-weight: bold;
+        }
+        .form_item {
+            padding: 10px 0px;
+            .item {
+                padding: 5px 15px;
+                border: 1px solid #dcdcdc;
+                border-radius: 10px;
+                input {
+                    border: none;
+                    padding: 5px 20px;
+                    outline: none;
+                    font-size: 14px;
+                    width: 250px;
+                }
+            }
+        }
+        .form_actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0px;
+            span {
+                font-size: 14px;
+                color: #87a0aa;
+                cursor: pointer;
+            }
+            button {
+                border: none;
+                padding: 8px 20px;
+                border-radius: 10px;
+                font-size: 14px;
+                color: #fff;
+                background: #14a7fa;
+            }
+        }
+    }
+}

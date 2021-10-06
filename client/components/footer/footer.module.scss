@@ -1,0 +1,82 @@
+.footer {
+    background: #000000;
+    padding: 50px;
+    color: #bfc4cd;
+    h3,
+    h5 {
+        color: #fff;
+        font-weight: bold;
+    }
+    h3 {
+        background: -webkit-linear-gradient(#f12711, #f5af19);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .welcome_text {
+        font-size: 14px;
+    }
+
+    .hr__neuro {
+        width: 100px;
+        height: 3px;
+        margin-bottom: 10px;
+        background: #f953c6; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #b91d73, #f953c6); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+            to right,
+            #b91d73,
+            #f953c6
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .pages,
+    .support {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul {
+            padding: 0px;
+            list-style: none;
+            li {
+                transition: 0.2s;
+                cursor: pointer;
+                &:hover {
+                    padding-left: 10px;
+                    color: #ffb41f;
+                }
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .social_linking {
+            display: flex;
+            padding-bottom: 10px;
+            .social_item {
+                margin-left: 20px;
+                cursor: pointer;
+                svg {
+                    font-size: 32px;
+                }
+            }
+        }
+        .email {
+            text-align: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footer {
+        padding: 50px 30px ;
+        .pages, .contact ,.support {
+            margin-top: 10px;
+        }
+        .pages,.support {
+            align-items: flex-start;
+        }
+    }
+}

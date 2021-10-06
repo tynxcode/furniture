@@ -1,0 +1,105 @@
+.category_list {
+    padding: 20px 0px;
+    .loading {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .controller {
+        .picker {
+            padding: 0px 0px 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            .element {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                cursor: pointer;
+                box-shadow: var(--sketch_box-shadow);
+                border: 2px solid #fff;
+                transition: 0.2s;
+                &:hover {
+                    border: 2px solid #1dddfa;
+
+                }
+            }
+            .element__active {
+                @extend .element;
+                border: 2px solid #14a7fa;
+            }
+        }
+        .introduction_text {
+            padding: 10px 0px;
+            h5 {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .text {
+                font-size: 14px;
+                color: #6a8894;
+            }
+        }
+        .browse_btn {
+            padding: 10px 0px;
+            button {
+                border-radius: 100%;
+                width: 45px;
+                height: 45px;
+                border: none;
+                background: #f93707;
+            }
+            span {
+                margin: 0px 10px;
+                font-size: 20px;
+            }
+        }
+    }
+    .product_list {
+        padding: 0px 5px;
+        min-height: 350px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .recommend_product {
+        .controller {
+            .picker {
+                .element {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+            .browse_btn {
+                button {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .recommend_product {
+        padding: 0;
+        .product_list {
+            padding: 20px 0px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .recommend_product {
+        
+        .product_list {
+            padding: 20px 0px;
+        }
+    }
+}
+
